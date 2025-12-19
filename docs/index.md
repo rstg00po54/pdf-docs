@@ -6,7 +6,8 @@
 
 - [快速入门](quick_start.md)
 - [Camera 文档](camera.md)
-
+- [Amoled 文档](Amoled.md)
+<!-- python3 -m mkdocs serve --dev-addr 0.0.0.0:8000 -->
 ---
 
 ## 在线 PDF 示例

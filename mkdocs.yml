@@ -3,13 +3,26 @@ site_url: https://<你的用户名>.github.io/pdf-docs/
 theme:
   name: material
   palette:
-    scheme: default
+    scheme: slate   # 暗色主题
   language: zh
+  features:
+    - navigation.expand    # 自动展开子菜单
+    - navigation.sections  # 按文档头生成章节
+    - navigation.instant   # 点击快速跳转
 nav:
   - 首页: index.md
   - 快速入门: quick_start.md
   - Camera: camera.md
+  - Amoled 文档: Amoled.md
+  - Camera:
+      - Overview: camera.md
+  - PDF 文档集:
+    - 10.1寸MIPI背光驱动板原理图: generated/10.1寸MIPI背光驱动板原理图.md
+    - LubanCat4CB_EBF410133V1R0_SCH_20250728: generated/LubanCat4CB_EBF410133V1R0_SCH_20250728.md
 plugins:
   - search   # 这里只放支持的插件
+  - macros
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - javascripts/pdf-auto-height.js

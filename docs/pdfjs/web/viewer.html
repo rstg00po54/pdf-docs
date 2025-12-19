@@ -1133,16 +1133,38 @@ See https://github.com/adobe-type-tools/cmap-resources
     </div>
     <!-- outerContainer -->
     <div id="printContainer"></div>
-  </body>
-  <style>
-#toolbarContainer,
-#secondaryToolbar,
-#sidebarContainer {
-  display: none !important;
-}
+    <script>
+      function reportHeight() {
+        const viewer = document.getElementById("viewer");
+        if (!viewer) return;
 
-#viewerContainer {
-  top: 0 !important;
-}
+        const height = viewer.scrollHeight;
+        window.parent.postMessage(
+          { type: "pdf-height", height },
+          "*"
+        );
+      }
+
+      document.addEventListener("pagesloaded", () => {
+        setTimeout(reportHeight, 300);
+      });
+
+      window.addEventListener("resize", () => {
+        setTimeout(reportHeight, 300);
+      });
+    </script>
+  </body>
+<style>
+  #toolbarContainer,
+  #secondaryToolbar,
+  #sidebarContainer {
+    display: none !important;
+  }
+
+  #viewerContainer {
+    top: 0 !important;
+  }
 </style>
+
+
 </html>

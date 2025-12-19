@@ -1,20 +1,18 @@
-/* 去掉 Material 内容区限制 */
+/* 放宽正文内容区域 */
+.md-main__inner {
+  max-width: 95% !important;   /* 或 100% */
+}
+
+/* 让文章正文用满 */
 .md-content__inner {
   max-width: 100% !important;
-  padding: 0 !important;
 }
 
-/* PDF 外层 */
-.pdf-wrapper {
-  width: 100%;
-  height: calc(100vh - 120px); /* 预留 header */
-  margin: 0;
-}
-
-/* iframe 本身 */
+/* PDF iframe 自己也铺满 */
 .pdf-frame {
   width: 100%;
-  height: 100%;
+  height: 90vh;
   border: none;
-  display: block;
 }
+
+
