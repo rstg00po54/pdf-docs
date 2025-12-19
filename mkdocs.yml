@@ -1,0 +1,13 @@
+site_name: RK3588 文档中心
+site_url: https://<你的用户名>.github.io/pdf-docs/
+theme:
+  name: material
+  palette:
+    scheme: default
+  language: zh
+nav:
+  - 首页: index.md
+  - 快速入门: quick_start.md
+  - Camera: camera.md
+plugins:
+  - search   # 这里只放支持的插件
